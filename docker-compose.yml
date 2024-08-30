@@ -1,0 +1,17 @@
+name: ist-presentation
+
+services:
+    app:
+        container_name: ${COMPOSE_PROJECT_NAME}
+        build:
+            context: .
+        environment:
+            - VITE_API_URL=${VITE_API_URL}
+            - VITE_APP_PORT=${VITE_APP_PORT}
+        ports:
+            - "${VITE_APP_PORT}:${VITE_APP_PORT}"
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.25"
+                    memory: "512MB"
