@@ -17,7 +17,9 @@ export const Route = createRootRoute({
                             <Link
                                 className="text-indigo-800 font-semibold hover:scale-105 transition-all duration-300"
                                 to={menuItem.path}
-                                activeProps={{ className: "text-indigo-900 scale-110" }}
+                                activeProps={{
+                                    className: "text-indigo-900 scale-110",
+                                }}
                             >
                                 {menuItem.name}
                             </Link>

@@ -17,6 +17,9 @@ declare module "@tanstack/react-router" {
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <RouterProvider router={router} />
+        <RouterProvider
+            router={router}
+            basepath={import.meta.env.VITE_APP_ROOT}
+        />
     </StrictMode>
 );
